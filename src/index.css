@@ -1,0 +1,24 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    --titleColor: #FFFFFF;
+    --primaryColor: #635FC7;
+    --primaryHover: #A8A4FF;
+    --secondaryColor: #FFFFFF;
+    --secondaryHover: #DCDBFA;
+    --tertiaryHover: #A8A4FF;
+    --sidebarBtnColor: #635FC7;
+    --sidebarBtnHover: #FFFFFF;
+    --errorColor: #EA5555;
+    --errorHover: #FF9898;
+    --buttonTitle: #FFFFFF;
+    --detailsColor: #E4EBFA;
+    --subtitleColor: #828FA3;
+    --borderColor: #3E3F4E;
+    --cardsColor: #2B2C37;
+    --bgColor: #20212C;
+    --scrollColor: #3E3F4E;
+    --lightBgColor: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+}

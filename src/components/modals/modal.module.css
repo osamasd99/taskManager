@@ -1,0 +1,294 @@
+.backContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.885);
+    z-index: 99;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    overflow-y: auto;
+    width: 600px;
+    max-height:95vh;
+    background-color: var(--cardsColor);
+    border-radius: 15px;
+}
+.container::-webkit-scrollbar {
+    width: 10px;
+}
+
+.container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--scrollColor);
+    border-radius: 10px;
+    background-color: var(--bgColor);
+}
+.container::-webkit-scrollbar-thumb {
+    background: var(--scrollColor);
+    border-radius: 10px;
+    
+
+}
+.title{
+    height: 5%;
+    width: 90%;
+    margin: 30px auto 25px;
+    color: var(--titleColor);
+}
+
+.input{
+    width: 90%;
+    height: 20%;
+    margin: 0px auto 40px;
+    color: var(--titleColor);
+    font-size: 14px;
+    font-weight: bold;
+}
+.input input{
+    width: 95%;
+    height: 45px;
+    margin-top: 10px;
+    border: 1px solid var(--borderColor);
+    color: var(--titleColor);
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    padding: 0px 0px 0px 20px ;
+    font-size: 16px;
+}
+.input textarea{
+    width: 95%;
+    height: 100px;
+    margin-top: 10px;
+    border: 1px solid var(--borderColor);
+    color: var(--titleColor);
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    padding: 10px 0px 0px 10px ;
+    font-size: 16px;
+}
+.multiInput{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        flex-grow: 1;
+        width: 90%;
+        margin: 0px auto 50px ;
+        color: var(--titleColor);
+        font-size: 14px;
+        font-weight: bold;
+}
+.addedInput{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+ .addedInput input{
+    width: 96%;
+    height: 45px;
+    margin-top: 10px;
+    border: 1px solid var(--borderColor);
+    outline: none;
+    border-radius: 5px;
+    background: none;
+    color: var(--titleColor);
+    padding: 0px 20px;
+    font-size: 16px;
+}
+.addedInput i{
+    margin-left: 3%;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--subtitleColor);
+    cursor: pointer;
+}
+
+/* ======== this for makeing custom select menu  =========  */
+.select{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    color: var(--subtitleColor);
+    border: 1px solid var(--borderColor) ;
+    border-radius: 5px;
+    height: 45px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 0px 20px ;
+    cursor: pointer;
+    
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: solid 1px var(--borderColor);
+    border-radius: 5px;
+    min-height: 100px;
+    width: 100%;
+    margin: 5px auto;
+}
+.optionsCheckBox{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    min-width: 30%;
+    height: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.optionsCheckBox:hover{
+    background-color: var(--borderColor);
+    border-radius: 5px;
+    .colorBox{
+        border: 1px solid var(--primaryColor);
+    }
+}
+.optionsCheckBox input[type=radio]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    left: 5px;
+    
+}
+.colorBox{
+    margin: 8px;
+    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+}
+.optionsCheckBox input[type=radio]:checked ~ .colorBox{
+        background-color: var(--primaryColor);
+}
+
+/* ========== button  ===========  */
+.btnWhite{
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    margin: 20px auto 20px;
+    cursor: pointer;
+    background-color: var(--lightBgColor);
+    color: var(--sidebarBtnColor);
+    font-size: 14px;
+    font-weight: bold;
+}
+.btnWhite:hover{
+    background-color: var(--secondaryHover);
+}
+.btnPurple{
+    width: 100%;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    margin: 10px auto 0px;
+    cursor: pointer;
+    background-color: var(--sidebarBtnColor);
+    color: var(--secondaryColor);
+    font-size: 14px;
+    font-weight: bold;
+
+}
+.btnPurple:hover{
+    background-color: var(--primaryHover);
+
+}
+
+
+
+/* ========== used in delete modal ========== */
+.titleErorr{
+    text-align: center;
+    height: 5%;
+    width: 90%;
+    margin: 30px auto 10px;
+    color: var(--errorColor);
+}
+.text{
+    text-align: center;
+    height: 5%;
+    width: 90%;
+    margin: 20px auto 20px;
+    color: var(--subtitleColor);
+}
+.deleteButtonContainer{
+    display: flex;
+    justify-content: center;
+}
+.btnCancel{
+    width: 35%;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 0px 20px 10px;
+    cursor: pointer;
+    background-color: var(--lightBgColor);
+    color: var(--sidebarBtnColor);
+    font-size: 14px;
+    font-weight: bold;
+}
+.btnCancel:hover{
+    background-color: var(--secondaryHover);
+}
+.btnDelete{
+    width: 35%;
+    height: 45px;
+    border: none;
+    border-radius: 20px;
+    margin: 0px 0px 20px 10px;
+    cursor: pointer;
+    background-color: var(--errorColor);
+    color: var(--buttonTitle);
+    font-size: 14px;
+    font-weight: bold;
+}
+.btnDelete:hover{
+    background-color: var(--errorHover);
+}
+
+
+/* ====================  media  ======================= */
+ @media (max-width:375px){
+    .container{
+        max-width: 90%;
+        max-height: 90vh;
+    }
+}
+
+@media (min-width:375px) and (max-width:767px ){
+    .container{
+        max-width: 90%;
+        max-height: 90vh;
+    }
+}
+
+@media(min-width:768px ) and (max-width:991px){
+
+}
+@media (min-width:992px) and (max-width:1200px){
+    
+}
+@media (min-width:1200px) and (max-width:1439px){
+    
+}
+@media (min-width:1440px){
+}
+
+
+
+
+

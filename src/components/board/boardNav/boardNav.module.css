@@ -1,0 +1,150 @@
+.nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100% ;
+    height: 95px;
+    background-color: var(--cardsColor);
+    border: 1px inset solid var(--borderColor);
+    
+}
+
+.title{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+    height: 60px;
+    margin-left: 40px;
+}
+.title h1{
+    color: var(--titleColor);
+    
+    
+}
+.title i{
+    display: none;
+    font-size: 30px;
+    color: var(--primaryColor);
+}
+.addTaskBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    height: 50px;
+    width: 200px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primaryColor);
+    color: var(--buttonTitle);
+    cursor: pointer;
+}
+.addTaskBtn:hover{
+    background-color: var(--primaryHover);
+}
+.addTaskBtn span{
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.addTaskBtn i{
+    font-size: 14px;
+    font-weight: bold;
+}
+.toggle{
+    background: none;
+    margin-left: 20px;
+    margin-right: 35px;
+    padding: 0px;
+    width: 25px;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.toggle:hover{
+    background-color: var(--bgColor);
+}
+.toggle i{
+    margin:0px -5px;
+    font-size: 32px;
+    color: var(--subtitleColor);
+}
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    position: absolute;
+    right: 30px;
+    top: 90px;
+    width: 170px;
+    height: 110px;
+    background-color: var(--cardsColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 10px;
+}
+.menu span:first-of-type{
+    cursor: pointer;
+    color: var(--subtitleColor);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 18px;
+}
+.menu span:first-of-type:hover{
+    color: var(--detailsColor);
+}
+.menu span:last-of-type{
+    cursor: pointer;
+    color: var(--errorColor);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 8px 18px;
+
+}
+.menu span:last-of-type:hover{
+    color: var(--errorHover);
+}
+
+@media (max-width:375px){
+    .title i{
+        display: block;
+    }
+    .addTaskBtn{
+        width: 50px;
+    }
+    .addTaskBtn span{
+        display: none;
+    }
+}
+
+@media (min-width:375px) and (max-width:767px ){
+    .title i{
+        display: block;
+    }
+    .addTaskBtn{
+        height: 35px;
+        width: 60px;
+        padding: 0px;
+    }
+    .addTaskBtn span{
+        display: none;
+        
+    }
+    .addTaskBtn i{
+        font-size: 22px;
+    }
+}
+
+@media(min-width:768px ) and (max-width:991px){
+
+}
+@media (min-width:992px) and (max-width:1200px){
+    
+}
+@media (min-width:1200px) and (max-width:1439px){
+    
+}
+@media (min-width:1440px){
+
+}
