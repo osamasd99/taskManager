@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 function DeleteTaskModal(){
     const dispatch = useDispatch()
-    const openModal=useSelector(state=>state.openModal)
+    const openModal=useSelector(state=>state.openModal)// to select the open modal
     const currentElementId=useSelector(state=>state.currentElementId)// to get the current element id we work on it 
     const modalRef= useRef()
     //  =========== handel  open & close modal ==============  //

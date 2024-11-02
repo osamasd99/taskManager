@@ -10,12 +10,12 @@ function AddTaskModal(){
     const dispatch = useDispatch()
     const [subTasks,setSubTasks]=useState([])//  create columns data
     const openModal=useSelector(state=>state.openModal)// this state for targeting the modal  user open it 
-    const teamBoards=useSelector(state=>state.teamBoards)
-    const currentElementId =useSelector(state=>state.currentElementId)
+    const teamBoards=useSelector(state=>state.teamBoards) // all boards data 
+    const currentElementId =useSelector(state=>state.currentElementId) //  return id of element  selected 
     const board = getCurrentBoard(teamBoards, currentElementId.boardId)  
     const modalRef= useRef() // this ref used in close and open modal  
     const optionsRef =useRef() // this ref used in close and open the menu of column or the options 
-    const titleRef=useRef()
+    const titleRef=useRef() 
     const descriptionRef=useRef() 
     const selectedOptionRef =useRef()
     const id = uuidv4()

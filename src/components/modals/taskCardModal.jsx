@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
 import modal from './modal.module.css'
 import { useEffect,  useRef } from 'react'
-import DeleteTaskModal from './deleteTaskModal'
-import EditTaskModal from './editTaskModal'
 import {  getCurrentBoard, getCurrentTask } from '../../functions/getCurrentElement'
 
 function TaskCardModal(){
@@ -22,7 +20,6 @@ function TaskCardModal(){
             modalRef.current.style.display="flex"
         }else{
             modalRef.current.style.display="none"
-           
         }
     },[openModal])
     function handelCloseModal(e){

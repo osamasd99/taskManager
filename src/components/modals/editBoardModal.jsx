@@ -19,7 +19,7 @@ function EditBoardModal(){
     useMemo(()=>{
         setColumn(board?.columns)
         setBoardName(board?.name) 
-    },[board,openModal])
+    },[board,openModal])//we use open modal here  to force update when open and close 
     
     //  ============ handel open & close  modal  =========== //
     useEffect(()=>{

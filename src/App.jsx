@@ -11,10 +11,6 @@ import Board from './components/board/Board'
 
 
 function App() {
- 
-
-    
-  
   return (
     <>
       <div className= {app.container}>
@@ -23,7 +19,6 @@ function App() {
             <SideBarModal/> 
             <CreateNewBoardModal/>
       </div>
-     
     </>
   )
 }

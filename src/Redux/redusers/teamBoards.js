@@ -1,3 +1,5 @@
+// this store for  all boards data
+
 const teamBoards =(state=[
     {
         id:"42545",

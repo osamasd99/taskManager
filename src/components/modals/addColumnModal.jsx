@@ -8,9 +8,9 @@ import { getCurrentBoard } from "../../functions/getCurrentElement";
 
 function AddColumnModal(){
     const dispatch = useDispatch()
-    const teamBoards =useSelector(state=>state.teamBoards)
-    const openModal=useSelector(state=>state.openModal)
-    const currentElementId =useSelector(state=>state.currentElementId)
+    const teamBoards =useSelector(state=>state.teamBoards) //all boards data
+    const openModal=useSelector(state=>state.openModal) //   to select the open  modal 
+    const currentElementId =useSelector(state=>state.currentElementId)  // return the id of the element we select     
     const board = getCurrentBoard(teamBoards,currentElementId.boardId)
     const [column,setColumn]=useState([])//  create columns data
     const modalRef= useRef()

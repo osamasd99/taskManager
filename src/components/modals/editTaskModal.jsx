@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 function EditTaskModal(){
     const dispatch = useDispatch()
-    const openModal=useSelector(state=>state.openModal)
+    const openModal=useSelector(state=>state.openModal)// to select the open modal  
     const teamBoards =useSelector(state=>state.teamBoards) // all boards data
     const currentElementId=useSelector(state=>state.currentElementId)// to get the current element id we work on it 
     const board = getCurrentBoard(teamBoards,currentElementId.boardId)

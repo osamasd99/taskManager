@@ -5,9 +5,9 @@ import { useDispatch, useSelector } from 'react-redux'
 
 function DeleteBoardModal(){
     const dispatch = useDispatch()
-    const teamBoards =useSelector(state=>state.teamBoards)
-    const openModal=useSelector(state=>state.openModal)
-    const currentElementId =useSelector(state=>state.currentElementId)
+    const teamBoards =useSelector(state=>state.teamBoards)// all boards data
+    const openModal=useSelector(state=>state.openModal) // to select the open modal  
+    const currentElementId =useSelector(state=>state.currentElementId) // return id  of selected element  
     const modalRef= useRef()
 // =============== handel open & close modal ================//
     useEffect(()=>{

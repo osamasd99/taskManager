@@ -5,9 +5,9 @@ import { useEffect, useRef, useState } from 'react'
 
 function SideBarModal(){
     const dispatch =useDispatch()
-    const openModal=useSelector(state=>state.openModal)
+    const openModal=useSelector(state=>state.openModal)// to select the open modal 
     const teamBoards =useSelector(state=>state.teamBoards)// team data state
-    const currentElementId =useSelector(state=>state.currentElementId)
+    const currentElementId =useSelector(state=>state.currentElementId) // return id of  the selected element  
     const [mode,setMode]=useState(localStorage.getItem("theme")||"darkMode")// set initial value for mode  
     const modalRef= useRef()
 // ============ handel open &close modal  ==================// 
@@ -57,7 +57,7 @@ function SideBarModal(){
                     
 
                     <div className={modal.multiInput}>
-                            <h4> All Boards (1) </h4>
+                            <h4> All Boards ({teamBoards.length}) </h4>
                 {/*============= Created boards  Links =============   */}
                 {teamBoards.map((board,index)=>
                     <nav key={index} onClick={()=>{ dispatch({ type:"currentBoardId",data:board.id}) }}  className={currentElementId.boardId!=board.id?modal.boardName:modal.activeBoardName}  >

@@ -54,7 +54,7 @@ function SideBar(){
                 <h1 className={sideBar.title}>tasksManager</h1>
         {/*============== Boards Names Container ================= */}
                 <div className={sideBar.boardNamesContainer}>
-                    <h4> All Boards (1) </h4>
+                    <h4> All Boards ({teamBoards.length}) </h4>
         {/*============= Created boards  Links =============   */}
                 {teamBoards.map((board,index)=>
                     <nav key={index} 
