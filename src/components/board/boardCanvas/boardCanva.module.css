@@ -1,0 +1,82 @@
+.backGround{
+    display:flex;
+    width: 100%;
+    height: calc(100vh - 100px); 
+    background-color: var(--bgColor) ;
+    overflow: auto;
+}
+.backGround::-webkit-scrollbar {
+    width: 10px;
+}
+.backGround::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--scrollColor);
+    border-radius: 10px;
+    background-color: var(--bgColor);
+}
+.backGround::-webkit-scrollbar-thumb {
+    background: var(--scrollColor);
+    border-radius: 10px;
+}
+.column{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    flex-shrink: 0;
+    width: 350px;
+    min-height: calc(100vh - 100px);
+    margin: 25px 30px 30px ;
+}
+.column p{
+    color: var(--subtitleColor);
+    align-items: center;
+    align-content: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.column i{
+   font-size: 16px;
+    color:aqua;
+}
+.taskCard{
+    flex-shrink: 0;
+    border-radius: 8px;
+    width: 90%;
+    min-height: 100px;
+    margin: 0px auto 25px;
+    background-color: var(--cardsColor);
+    cursor:grab;
+}
+.taskCard.taskCard h3:hover{
+        color: var(--primaryColor);
+}
+.taskCard h3{
+    margin-left:20px ;
+    color: var(--titleColor);
+}
+.taskCard p{
+    margin-left:20px ;  
+    font-size: 14px;
+    color: var(--subtitleColor);
+}
+.columnContent{
+    width: 100%;
+    min-height: 100%;
+    border:  2px dashed var(--borderColor);
+    border-radius: 10px;
+}
+
+.addColumnBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    flex-shrink: 0;
+    height: calc(100vh - 100px);
+    margin: 75px 10px 30px;
+    background: linear-gradient(var(--cardsColor), var(--bgColor));
+    border-radius: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--subtitleColor);
+    cursor: pointer;
+}

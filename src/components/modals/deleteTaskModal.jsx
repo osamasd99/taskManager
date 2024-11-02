@@ -3,15 +3,14 @@ import modal from './modal.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 
 
-function DeleteBoardModal(){
+function DeleteTaskModal(){
     const dispatch = useDispatch()
-    const teamBoards =useSelector(state=>state.teamBoards)
     const openModal=useSelector(state=>state.openModal)
-    const currentElementId =useSelector(state=>state.currentElementId)
+    const currentElementId=useSelector(state=>state.currentElementId)// to get the current element id we work on it 
     const modalRef= useRef()
-// =============== handel open & close modal ================//
+    //  =========== handel  open & close modal ==============  //
     useEffect(()=>{
-        if(openModal=="deleteBoardModal"){
+        if(openModal=="deleteTaskModal"){
             modalRef.current.style.display="flex"
         }else{
             modalRef.current.style.display="none"
@@ -25,44 +24,44 @@ function DeleteBoardModal(){
             })
         }
     }
-    function handelCancel(){
+    function handelCancelBtn(){
         dispatch({
             type:"openModalUpdate",
             data:"none"
         })
     }
-    // =============== handel Delete Board ================//
-    function handelDeleteBoard(){
-        
-        const index =teamBoards.findIndex((value)=>{return value.id == currentElementId.boardId})
-        const newTeamBoards=teamBoards.toSpliced(index,1)
+    //==============   handel delete ===============//
+    function handelDeleteBtn(){
         dispatch({
-            type:"teamBoardsUpdate",
-            data:newTeamBoards
-        })
-        dispatch({
-            type:"currentBoardId",
-            data:"0"
+            type:"deleteTask",
+            data:{
+                boardId:currentElementId.boardId,
+                columnId:currentElementId.columnId,
+                taskId:currentElementId.taskId
+            }
         })
         dispatch({
             type:"openModalUpdate",
             data:"none"
         })
-
+        dispatch({
+            type:"currentTaskId",
+            data:false
+        })
     }
     return(
         <>
             <div ref={modalRef} onClick={handelCloseModal} style={{display:"none"}} className={modal.backContainer}>
                 <div className={modal.container} >
-                    <h3 className={modal.titleErorr}> Delete this Board? </h3>
+                    <h3 className={modal.titleErorr}> Delete this Task? </h3>
                     <p className={modal.text} >
                         Are you sure you want to delete the ‘Platform Launch<br/>
-                        board’? This action will remove all columns and tasks and<br/>
+                        board’? This action will removetask and<br/>
                         cannot be reversed.
                     </p>
                     <div className={modal.deleteButtonContainer} >
-                        <button onClick={handelDeleteBoard} className={modal.btnDelete} >Delete</button>
-                        <button onClick={handelCancel} className={modal.btnCancel} >Cancel</button>
+                        <button onClick={handelDeleteBtn} className={modal.btnDelete} >Delete</button>
+                        <button onClick={handelCancelBtn} className={modal.btnCancel} >Cancel</button>
                     </div>
                 </div>
                     
@@ -73,4 +72,4 @@ function DeleteBoardModal(){
     )
 }
 
-export default DeleteBoardModal
+export default DeleteTaskModal

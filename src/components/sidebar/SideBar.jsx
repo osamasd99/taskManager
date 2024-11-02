@@ -1,22 +1,26 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import sideBar from './SideBar.module.css'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+
 
 
 
 function SideBar(){
     const sideBarRef = useRef()
     const visibilityButtonRef = useRef()
+    const [mode,setMode]=useState(localStorage.getItem("theme")||"darkMode")// set initial value for mode  
+    const teamBoards =useSelector(state=>state.teamBoards)
+    const currentElementId =useSelector(state=>state.currentElementId)
     const dispatch =useDispatch()
     
-    
+    // ======= open create board modal ============== //
     function handelBtnCreate(){
         dispatch({
             type:"openModalUpdate",
             data:"newBoardModal",
         })
     }
-    
+    // ===========  handel hide sidebar button ===============//
     function handelSideBarVisibilty(){
         if (sideBarRef.current.style.display!="none"){
             sideBarRef.current.style.display="none"
@@ -26,6 +30,23 @@ function SideBar(){
             visibilityButtonRef.current.style.display="none"
         }
     }
+    // ============= mode switch  dark light  ===================//
+    // func to update state and local storge  
+    function handelModeSwitch(e){
+        if(e.target.checked==true){
+            setMode("lightMode")
+            localStorage.setItem("theme","lightMode")
+        }else{
+            setMode("darkMode")
+            localStorage.setItem("theme","darkMode")
+            
+        }
+    }
+    // update theme or mode by using mode state //
+    useEffect(()=>{
+        document.body.classList=mode
+    },[mode])
+    
     return(
         <>
             <div ref={sideBarRef} className={sideBar.container} >
@@ -35,11 +56,19 @@ function SideBar(){
                 <div className={sideBar.boardNamesContainer}>
                     <h4> All Boards (1) </h4>
         {/*============= Created boards  Links =============   */}
-                    <nav className={sideBar.boardName} >
+                {teamBoards.map((board,index)=>
+                    <nav key={index} 
+                    onClick={()=>{ 
+                        dispatch({ type:"currentBoardId",data:board.id}) 
+                        dispatch({ type:"currentTaskId",data:false}) 
+                        dispatch ({ type:"currentColumnId",data:false}) }}  
+                    className={currentElementId.boardId!=board.id?sideBar.boardName:sideBar.activeBoardName}  >
                         <i className="material-symbols-outlined">space_dashboard</i>
-                        <span>board name</span>
+                        <span>{board.name}</span>
                     </nav>
-        {/* ================================================= */}
+                )}
+
+        {/* ========================Create New Board Btn========================= */}
                     <button  onClick={handelBtnCreate} className={sideBar.btnCreate}>
                         <i className="material-symbols-outlined">add_circle</i>
                         <span>Create New Board</span>
@@ -52,8 +81,8 @@ function SideBar(){
                             dark_mode
                         </i>
                         <label className={sideBar.switch}>
-                            <input type="checkbox"/>
-                            <span className={sideBar .slider } ></span>
+                            <input  onChange={handelModeSwitch} checked={mode=="darkMode"?false:true}  type="checkbox"/>
+                            <span className={sideBar.slider } ></span>
                         </label>
                         <i className="material-symbols-outlined">
                             light_mode

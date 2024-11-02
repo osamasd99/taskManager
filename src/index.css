@@ -1,6 +1,10 @@
 body{
     padding: 0px;
     margin: 0px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    
+}
+.darkMode{
     --titleColor: #FFFFFF;
     --primaryColor: #635FC7;
     --primaryHover: #A8A4FF;
@@ -19,6 +23,25 @@ body{
     --bgColor: #20212C;
     --scrollColor: #3E3F4E;
     --lightBgColor: #FFFFFF;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    
+}
+
+.lightMode{
+    --titleColor: #000000;
+    --primaryColor: #635FC7;
+    --primaryHover: #A8A4FF;
+    --secondaryColor: #EFEFF9;
+    --secondaryHover: #DCDBFA;
+    --tertiaryHover: #A8A4FF;
+    --sidebarBtnColor: #635FC7;
+    --sidebarBtnHover: #DCDBFA;
+    --errorColor: #EA5555;
+    --errorHover: #FF9898;
+    --buttonTitle: #FFFFFF;
+    --detailsColor: #635FC7;
+    --subtitleColor: #828FA3;
+    --borderColor: #E4EBFA;
+    --cardsColor: #FFFFFF;
+    --bgColor: #F4F7FD;
+    --scrollColor: #828FA3;
+    --lightBgColor: #F0EFFA;
 }

@@ -1,23 +1,29 @@
+
+
 import app from './App.module.css'
-import Board from './components/board/board'
-import AddTaskModal from './components/modals/addTaskModal'
-import CreateNewBoardModal from './components/modals/createNewBoardModal'
-import DeleteBoardModal from './components/modals/deleteBoardModal'
+import SideBarModal from './components/modals/sideBarModal'
 import SideBar from './components/sidebar/SideBar'
+import CreateNewBoardModal from './components/modals/createNewBoardModal'
+import Board from './components/board/Board'
+
+
+
+
 
 function App() {
+ 
+
+    
   
   return (
     <>
       <div className= {app.container}>
-          <SideBar/>
-          <Board/>
-          <AddTaskModal/>
-          <CreateNewBoardModal/>
-          <DeleteBoardModal/>
-
-          
+            <SideBar/>
+            <Board/>
+            <SideBarModal/> 
+            <CreateNewBoardModal/>
       </div>
+     
     </>
   )
 }
