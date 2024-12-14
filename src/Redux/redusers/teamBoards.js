@@ -1,130 +1,6 @@
 // this store for  all boards data
 
-const teamBoards =(state=[
-    {
-        id:"42545",
-        name:"marketing stratgy",
-        columns:[
-            {
-                id:"4522452",
-                name:"Target Audiance",
-                color:"#000000",
-                tasks:[
-                    {
-                        id:"78878",
-                        title:"consaltant company 00",
-                        desc:"",
-                        subTasks:[
-                            
-                        ]
-                    }
-                ]
-            }, {
-                id:"1454545",
-                name:"Target fss",
-                color:"#000000",
-                tasks:[
-                    {
-                        id:"5464",
-                        title:"consaltant company 01",
-                        desc:"this target Audiance suffring from some problems we write it in subTasks",
-                        subTasks:[
-                            {
-                                id:"5645645",
-                                name:"kkdflksf",
-                                checked:false,
-                            },
-                            {
-                                id:'45646',
-                                name:"kkdflksf",
-                                checked:true,
-                            },
-                            {
-                                id:"4564556",
-                                name:"kkdflksf",
-                                checked:false,
-                            }
-                        ]
-                    },
-                    {
-                        id:"adafsfs",
-                        title:"consaltant company 01",
-                        desc:"this target Audiance suffring from some problems we write it in subTasks",
-                        subTasks:[
-                            {
-                                id:"423443",
-                                name:"kkdflksf",
-                                checked:false,
-                            },
-                            {
-                                id:'45646',
-                                name:"kkdflksf",
-                                checked:true,
-                            },
-                            {
-                                id:"4564556",
-                                name:"kkdflksf",
-                                checked:false,
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },{
-        id:"32",
-        name:"marketing 00",
-        columns:[
-            {
-                id:"12",
-                name:"Target 00",
-                color:"#000000",
-                tasks:[
-                    {
-                        id:"1121",
-                        title:"consaltant 00",
-                        desc:"this target Audiance suffring from some problems we write it in subTasks",
-                        subTasks:[
-                            {
-                                id:"1222",
-                                name:"kkdflksf",
-                                checked:true,
-                            },
-                            {
-                                id:"2121",
-                                name:"kkdflksf",
-                                checked:true,
-                            },
-                            {
-                                id:"312",
-                                name:"kkdflksf",
-                                checked:true,
-                            }
-                        ]
-                    }
-                ]
-            }, {
-                id:"212",
-                name:"Target 00",
-                color:"#000000",
-                tasks:[
-                    {
-                        id:"1454",
-                        title:"consaltant 01",
-                        desc:"this target Audiance suffring from some problems we write it in subTasks",
-                        subTasks:[
-                            {
-                                id:"14545",
-                                name:"kkdflksf",
-                                checked:false,
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-]
+const teamBoards =(state=[]
     ,action)=>{
     if (action.type=="teamBoardsUpdate"){
         return action.data
@@ -223,3 +99,126 @@ export default teamBoards
 
 
 
+// {
+//     id:"42545",
+//     name:"marketing strategy",
+//     columns:[
+//         {
+//             id:"4522452",
+//             name:"Target Audience",
+//             color:"#000000",
+//             tasks:[
+//                 {
+//                     id:"78878",
+//                     title:"consultant company 00",
+//                     desc:"",
+//                     subTasks:[
+                        
+//                     ]
+//                 }
+//             ]
+//         }, {
+//             id:"1454545",
+//             name:"Target fss",
+//             color:"#000000",
+//             tasks:[
+//                 {
+//                     id:"5464",
+//                     title:"consultant company 01",
+//                     desc:"this target Audience suffering from some problems we write it in subTasks",
+//                     subTasks:[
+//                         {
+//                             id:"5645645",
+//                             name:"kkdflksf",
+//                             checked:false,
+//                         },
+//                         {
+//                             id:'45646',
+//                             name:"kkdflksf",
+//                             checked:true,
+//                         },
+//                         {
+//                             id:"4564556",
+//                             name:"kkdflksf",
+//                             checked:false,
+//                         }
+//                     ]
+//                 },
+//                 {
+//                     id:"adafsfs",
+//                     title:"consaltant company 01",
+//                     desc:"this target Audiance suffring from some problems we write it in subTasks",
+//                     subTasks:[
+//                         {
+//                             id:"423443",
+//                             name:"kkdflksf",
+//                             checked:false,
+//                         },
+//                         {
+//                             id:'45646',
+//                             name:"kkdflksf",
+//                             checked:true,
+//                         },
+//                         {
+//                             id:"4564556",
+//                             name:"kkdflksf",
+//                             checked:false,
+//                         }
+//                     ]
+//                 }
+//             ]
+//         }
+//     ]
+// },{
+//     id:"32",
+//     name:"marketing 00",
+//     columns:[
+//         {
+//             id:"12",
+//             name:"Target 00",
+//             color:"#000000",
+//             tasks:[
+//                 {
+//                     id:"1121",
+//                     title:"consultant 00",
+//                     desc:"this target Audience suffering from some problems we write it in subTasks",
+//                     subTasks:[
+//                         {
+//                             id:"1222",
+//                             name:"kkdflksf",
+//                             checked:true,
+//                         },
+//                         {
+//                             id:"2121",
+//                             name:"kkdflksf",
+//                             checked:true,
+//                         },
+//                         {
+//                             id:"312",
+//                             name:"kkdflksf",
+//                             checked:true,
+//                         }
+//                     ]
+//                 }
+//             ]
+//         }, {
+//             id:"212",
+//             name:"Target 00",
+//             color:"#000000",
+//             tasks:[
+//                 {
+//                     id:"1454",
+//                     title:"consaltant 01",
+//                     desc:"this target Audiance suffring from some problems we write it in subTasks",
+//                     subTasks:[
+//                         {
+//                             id:"14545",
+//                             name:"kkdflksf",
+//                             checked:false,
+//                         }
+//                     ]
+//                 }
+//             ]
+//         }
+//     ]
+// }

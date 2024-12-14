@@ -1,0 +1,77 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; 
+    background:var(--bgColor);
+    
+}
+.container h1{
+    height: 10vh;
+    color: var(--titleColor);
+    font-size: 70px;
+    text-shadow: 0px 0px 10px var(--primaryColor);
+}
+.container p{
+    height: 10vh;
+    text-align: center;
+    color: var(--subtitleColor);
+    font-weight: bold;
+}
+.card1{
+    height: 35vh;
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card1 :first-child {
+    outline: none;
+    border: none;
+    width:200px;
+    height: 40px;
+    margin: 0px 20px ;
+    background-color: var(--cardsColor);
+    color: var(--sidebarBtnColor);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card1 :last-child {
+    outline: none;
+    border: none;
+    width:200px;
+    height: 40px;
+    margin: 0px 20px ;
+    background-color: var(--sidebarBtnColor);
+    color: var(--secondaryColor);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.card2{
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+.card2 h3{
+    height: 30%;
+    width: 200px;
+    align-content: center;
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+    border:  1px dashed var(--subtitleColor);
+    color: var(--subtitleColor);
+    text-shadow: 0px 40px 100px var(--subtitleColor);
+    border-radius: 8px;
+    font-weight: 600;
+}
